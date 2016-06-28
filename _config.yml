@@ -1,3 +1,8 @@
+deploy:
+  type: github
+  repository: https://github.com/RiXiong/RiXiong.github.io.git
+  branch: master
+
 # Header
 menu:
   主页: /
