@@ -6,6 +6,7 @@
 
 ##架构那些事儿
 
-[大型网站系统架构的演化](http://jbeacon.top/2016/08/14/website/?_blank) [单机架构的那些事儿](http://jbeacon.top/2016/08/14/website01/?_blank)   
+- [1 大型网站系统架构的演化](http://jbeacon.top/2016/08/14/website/?_blank)
+- [2 单机架构的那些事儿](http://jbeacon.top/2016/08/14/website01/?_blank)   
 
 
