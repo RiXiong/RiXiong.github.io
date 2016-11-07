@@ -1,0 +1,25 @@
+[{
+    "image": "/css/images/psb6.jpg",
+    "align": "center",
+    "title": "炎炎夏日",
+    "subtitle": "Here's our small slogan.",
+	"link": "/"
+}, {
+    "image": "/css/images/psb2.jpg",
+    "align": "center",
+    "title": "夕阳西下",
+    "subtitle": "Here's our small slogan.",
+	"link": null
+}, {
+    "image": "/css/images/psb7.jpg",
+    "align": "left",
+    "title": "期期艾艾",
+    "subtitle": "Here's our small slogan.",
+	"link": null
+}, {
+    "image": "/css/images/psb3.jpg",
+    "align": "right",
+    "title": "昨日黄昏",
+    "subtitle": "Here's our small slogan.",
+	"link": null
+}]
