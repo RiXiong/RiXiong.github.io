@@ -179,16 +179,24 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/技术/">
-                    技术 <span class="right">3 篇</span></a>
+                <a class="no-padding" href="/categories/源码阅读/">
+                    源码阅读 <span class="right">3 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/技术/security源码导读系列/">
-                    security源码导读系列 <span class="right">2 篇</span></a>
+                <a class="no-padding" href="/categories/源码阅读/security源码导读系列/">
+                    security源码导读系列 <span class="right">3 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/技术/">
+                    技术 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -240,7 +248,7 @@
             
     
     
-    <a class="breadcrumb" href="/categories/技术/">技术</a><a class="breadcrumb" href="/categories/技术/security源码导读系列/">security源码导读系列</a>
+    <a class="breadcrumb" href="/categories/源码阅读/">源码阅读</a><a class="breadcrumb" href="/categories/源码阅读/security源码导读系列/">security源码导读系列</a>
 
 
         
@@ -275,7 +283,7 @@
 
 
             <div class="toc indigo-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#jdk-中加解密相关类"><span class="section table-of-contents-text">jdk 中加解密相关类</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#JCE框架"><span class="section table-of-contents-text">JCE框架</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#阅读源码如何入手"><span class="section table-of-contents-text">阅读源码如何入手</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#强大的Security-API"><span class="section table-of-contents-text">强大的Security API</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Basic-Security-Architecture"><span class="section table-of-contents-text">Basic Security Architecture</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Security-Provider"><span class="section table-of-contents-text">Security Provider</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Cryptography-Arthitecture-JCA"><span class="section table-of-contents-text">Cryptography Arthitecture (JCA)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Public-Key-Infrastructure"><span class="section table-of-contents-text">Public Key Infrastructure</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Authentication"><span class="section table-of-contents-text">Authentication</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Secure-Communication"><span class="section table-of-contents-text">Secure Communication</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Access-Control"><span class="section table-of-contents-text">Access Control</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#XML-Signature"><span class="section table-of-contents-text">XML Signature</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#jdk-中加解密相关类"><span class="section table-of-contents-text">jdk 中加解密相关类</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#JCE框架"><span class="section table-of-contents-text">JCE框架</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#阅读源码如何入手"><span class="section table-of-contents-text">阅读源码如何入手</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#强大的Security-API"><span class="section table-of-contents-text">强大的Security API</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Basic-Security-Architecture"><span class="section table-of-contents-text">Basic Security Architecture</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Security-Provider"><span class="section table-of-contents-text">Security Provider</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Cryptography-Arthitecture-JCA"><span class="section table-of-contents-text">Cryptography Arthitecture (JCA)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Public-Key-Infrastructure-PKI"><span class="section table-of-contents-text">Public Key Infrastructure(PKI)</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Authentication"><span class="section table-of-contents-text">Authentication</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Secure-Communication"><span class="section table-of-contents-text">Secure Communication</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#Access-Control"><span class="section table-of-contents-text">Access Control</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#XML-Signature"><span class="section table-of-contents-text">XML Signature</span></a></li></ol>
 </div>
 
 
@@ -330,7 +338,7 @@
 </ul>
 <p>Java内置的Provider提供了许多通用的密码算法，比如：RSA, DSA, ECDSA等签名算法、DES, AES, ARCFOUR等加密算法、MD5, SHA-1, SHA-256等信息摘要算法、还有Diffie-Hellman和ECDH这样的密钥协商算法。<br>此外，还有一些特殊的provider。</p>
 <p>比如SunPKCS11， 它允许Java代码无缝地使用PKCS#11的compliant tokens。<br>在Windows平台上，Java还提供了一些native的Provider去连接本地的 Microsoft CryptoAPI。这个provider的名字叫MSCAPI。它允许Java应用无缝地使用Windows平台的cryptographic service。</p>
-<h1 id="Public-Key-Infrastructure"><a href="#Public-Key-Infrastructure" class="headerlink" title="Public Key Infrastructure"></a>Public Key Infrastructure</h1><p>公钥基础构件<br>PKI是一个术语，主要用于描述一类基于公钥的安全信息交互框架。它允许identity，比如人或者组织，绑定在数字证书上，并且提供一种验证证书的方法。PKI包括了密钥、证书、公钥加密和可信的证书颁发机构(CAs，用于生成和签署证书)。<br>Java平台提供API和provider支持X.509、CRLs、PKIX证书路径的构建和验证。PKI相关的类可以在java.security和java.security.cert包下获取。</p>
+<h1 id="Public-Key-Infrastructure-PKI"><a href="#Public-Key-Infrastructure-PKI" class="headerlink" title="Public Key Infrastructure(PKI)"></a>Public Key Infrastructure(PKI)</h1><p>公钥基础构件<br>PKI是一个术语，主要用于描述一类基于公钥的安全信息交互框架。它允许identity，比如人或者组织，绑定在数字证书上，并且提供一种验证证书的方法。PKI包括了密钥、证书、公钥加密和可信的证书颁发机构(CAs，用于生成和签署证书)。<br>Java平台提供API和provider支持X.509、CRLs、PKIX证书路径的构建和验证。PKI相关的类可以在java.security和java.security.cert包下获取。</p>
 <p>密钥和证书的仓库<br>Java提供了长期持久化密钥和证书的功能。它通过key store和certificate store来实现。java.security.KeyStore这个类代表了一个key store，一个安全的，用于存储密码和可信证书的仓库。java.security.cert.CertStore类代表了一个certificate store，用于存储不相关的，不受信的证书。同样它可以存储CRLs。<br>Java平台包含标准的PKCS#11和PKCS#12 key store类型，此外还有一个基于文件的key store类型，叫做JKS(Java Key Store)。Java平台内置了一个名叫cacerts的特殊JKS，它为CA证书提供一个默认的密钥库。<br>SunPKCS11(之前在密码架构小节有提过哦)包含了一个PKCS#11的key store实现。这意味着安全硬件(比如：smartcard)的密钥和证书可以被Java应用所使用。<br>此外，Java平台提供了LDAP的certificate store类型用于访问存放在LDAP中的证书。还有一个certificate type用于访问存放在java.util.Collection中的证书。</p>
 <p>PKI Tools<br>Java提供了两个内置的工具帮助用户使用密钥，证书和Key store：keytool和jarsigner。<br>keytool用于创建和管理key store。它可以</p>
 <ul>
@@ -384,7 +392,7 @@
 <li>javax.xml.crypto.dsig.dom</li>
 </ul>
 <blockquote>
-<p>参考文章：<br><a href="http://m635674608.iteye.com/blog/1844777（强推荐）" target="_blank" rel="external">http://m635674608.iteye.com/blog/1844777（强推荐）</a><br><a href="http://joshuasabrina.iteye.com/blog/1798245（强推荐）" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1798245（强推荐）</a><br><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）</a><br><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）</a><br><a href="http://www.cnblogs.com/NullPointException/p/5054082.html" target="_blank" rel="external">http://www.cnblogs.com/NullPointException/p/5054082.html</a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p>
+<p>参考文章：<br><a href="http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）</a><br><a href="http://m635674608.iteye.com/blog/1844777（强推荐）" target="_blank" rel="external">http://m635674608.iteye.com/blog/1844777（强推荐）</a><br><a href="http://joshuasabrina.iteye.com/blog/1798245（强推荐）" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1798245（强推荐）</a><br><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）</a><br><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）</a><br><a href="http://www.cnblogs.com/NullPointException/p/5054082.html" target="_blank" rel="external">http://www.cnblogs.com/NullPointException/p/5054082.html</a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p>
 </blockquote>
 
             </div>
