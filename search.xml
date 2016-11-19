@@ -93,10 +93,12 @@
 <p><a href="/img/2016/11/tomcat03.jpg"><img src="/img/2016/11/tomcat03.jpg" alt="tomcat架构" title="title"></a><br><a href="/img/2016/11/tomcat04.jpg"><img src="/img/2016/11/tomcat04.jpg" alt="tomcat架构" title="title"></a></p>
 <p>Linux 下的实现基本一致。</p>
 <p>这样的好处是，显而易见的，这样能开启Tomcat的多个进程，即多台tomcat，挂了也不太怕，还有其他tomcat应用支撑，代码实例我们发版本的时候，只需要发布一份，实例代码易于维护。<br>但是，我们网站的域名和端口一般是同一采用80端口，统一的域名，而现在我们开启tomcat只能一个使用80端口，显然是不合适的·，为此我们会引入负载均衡的nginx来配置。<br>nginx 采用80 端口，tomcat分别采用8080， 8081， 8082 这样就能让我们的程序稳定的运行。<br>这样，我们就能进最大的限度来压榨单机的性能，保证应用程序的稳定的运行。<br>而然，单机不然有单机的瓶颈，毕竟单机中的cpu 已经各种硬件的限制，会大大影响实例程序的跑动，在这时，就不再是单机能抗的动的了，我们需要分析程序的瓶颈在那？数据库，那就把数据库单独分出去，单独一台机器，是文件图片服务器，就把他分出去。如果是应用程序太大，就要考虑把应用实例进行拆解为不同哦那个的组件，单独部署，这就是分布式部署。<br>当然，这都是后话，只有程序复杂到一定的程度，并体量很大的话，才会做这种架构的演变，成本和技术投入的难度也会相应的变大。<br>本章，只局限于如何玩好单机的基础上来讨论，对于分布式的那块，笔者能力有限，尚且还不能完全驾驭，不做分享。</p>
-<h1 id="7、实例的切换"><a href="#7、实例的切换" class="headerlink" title="7、实例的切换"></a>7、实例的切换</h1><blockquote>
-<p>参考文章：<br><a href="http://www.cnblogs.com/tq03/p/3507658.html" target="_blank" rel="external">http://www.cnblogs.com/tq03/p/3507658.html</a><br><a href="http://www.itnose.net/detail/6658488.html" target="_blank" rel="external">http://www.itnose.net/detail/6658488.html</a><br><a href="http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/" target="_blank" rel="external">http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/</a><br><a href="http://www.cnblogs.com/_popc/p/4167516.html" target="_blank" rel="external">http://www.cnblogs.com/_popc/p/4167516.html</a><br><a href="http://www.itnose.net/detail/6485584.html" target="_blank" rel="external">http://www.itnose.net/detail/6485584.html</a><br><a href="http://www.itnose.net/detail/6521677.html" target="_blank" rel="external">http://www.itnose.net/detail/6521677.html</a></p>
-<h2 id="http-www-itnose-net-detail-6448554-html"><a href="#http-www-itnose-net-detail-6448554-html" class="headerlink" title="http://www.itnose.net/detail/6448554.html"></a><a href="http://www.itnose.net/detail/6448554.html" target="_blank" rel="external">http://www.itnose.net/detail/6448554.html</a></h2><p><a href="/css/images/mm_facetoface_collect.png"><img src="/css/images/mm_facetoface_collect.png" alt="tomcat架构" title="title"></a></p>
+<h1 id="7、实例的切换"><a href="#7、实例的切换" class="headerlink" title="7、实例的切换"></a>7、实例的切换</h1><p>这部分将会涉及，LVS + keepalived + nginx + tomcat 实现主从热备 + 负载均衡 的内容，下篇文章有空再写.<br>主要思路:LVS提供虚拟服务；nginx作为反向代理服务器来实现负载均衡；keepalived实现主从热备，检查RealServer的健康状态以及主机与备机之间失效转移。<br>参考文章:<a href="http://www.cnblogs.com/youzhibing/p/5061786.html" target="_blank" rel="external">http://www.cnblogs.com/youzhibing/p/5061786.html</a></p>
+<blockquote>
+<p>参考文章：<br><a href="http://www.cnblogs.com/tq03/p/3507658.html" target="_blank" rel="external">http://www.cnblogs.com/tq03/p/3507658.html</a><br><a href="http://www.itnose.net/detail/6658488.html" target="_blank" rel="external">http://www.itnose.net/detail/6658488.html</a><br><a href="http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/" target="_blank" rel="external">http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/</a><br><a href="http://www.cnblogs.com/_popc/p/4167516.html" target="_blank" rel="external">http://www.cnblogs.com/_popc/p/4167516.html</a><br><a href="http://www.itnose.net/detail/6485584.html" target="_blank" rel="external">http://www.itnose.net/detail/6485584.html</a><br><a href="http://www.itnose.net/detail/6521677.html" target="_blank" rel="external">http://www.itnose.net/detail/6521677.html</a><br><a href="http://www.itnose.net/detail/6448554.html" target="_blank" rel="external">http://www.itnose.net/detail/6448554.html</a></p>
 </blockquote>
+<hr>
+<p><a href="/css/images/mm_facetoface_collect.png"><img src="/css/images/mm_facetoface_collect.png" alt="tomcat架构" title="title"></a></p>
 ]]></content>
     </entry>
     
@@ -394,16 +396,16 @@
   
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://yoursite.com/reading/index.html</url>
-      <content type="html"></content>
-    </entry>
-    
-    <entry>
       <title><![CDATA[关于]]></title>
       <url>http://yoursite.com/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是張日雄。欢迎来到我的个人技术博客。<br>懂点前端，懂点后端，会点运维，白天上班族，晚上知识的分享者。<br>笔者不是什么技术大牛，写代码也不厉害，只是万花丛中一点绿，但会思考，会努力，要求未来的我比现在的我要好，一位心态阳光的奋斗者。在此总结我的个人成长经验有三点：善于观察、乐于解决问题、善于总结。<br>希望通过该博客总结自己的经验，积累知识。</p>
 ]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[读书]]></title>
+      <url>http://yoursite.com/reading/index.html</url>
+      <content type="html"></content>
     </entry>
     
   
