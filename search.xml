@@ -149,7 +149,10 @@ http {
     }
 
 }
-</code></pre><blockquote>
+</code></pre><p>综上：我们做到了多台tomcat 但是我们也能做到tomcat的简单升级，并且实现实例的负载均衡，已经应用的主备，在也不用担心应用挂掉而睡不了觉了。</p>
+<p>本次的实验资源供下载：<a href="http://download.csdn.net/detail/a82793510/9687715" target="_blank" rel="external">http://download.csdn.net/detail/a82793510/9687715</a></p>
+<hr>
+<blockquote>
 <p>参考文章：<br><a href="http://www.cnblogs.com/tq03/p/3507658.html" target="_blank" rel="external">http://www.cnblogs.com/tq03/p/3507658.html</a><br><a href="http://www.itnose.net/detail/6658488.html" target="_blank" rel="external">http://www.itnose.net/detail/6658488.html</a><br><a href="http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/" target="_blank" rel="external">http://www.ttlsa.com/tomcat/config-multi-tomcat-instance/</a><br><a href="http://www.cnblogs.com/_popc/p/4167516.html" target="_blank" rel="external">http://www.cnblogs.com/_popc/p/4167516.html</a><br><a href="http://www.itnose.net/detail/6485584.html" target="_blank" rel="external">http://www.itnose.net/detail/6485584.html</a><br><a href="http://www.itnose.net/detail/6521677.html" target="_blank" rel="external">http://www.itnose.net/detail/6521677.html</a><br><a href="http://www.itnose.net/detail/6448554.html" target="_blank" rel="external">http://www.itnose.net/detail/6448554.html</a><br><a href="http://www.aikaiyuan.com/7907.html" target="_blank" rel="external">http://www.aikaiyuan.com/7907.html</a><br><a href="http://blog.csdn.net/cclovett/article/details/26377269" target="_blank" rel="external">http://blog.csdn.net/cclovett/article/details/26377269</a> (nginx)</p>
 </blockquote>
 <hr>
