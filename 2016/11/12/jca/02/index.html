@@ -7,7 +7,7 @@
 
     
 
-    <title>java.security源码解读系列-PKI | 灯塔</title>
+    <title>java.security源码解读系列-PKI.**Key** | 灯塔</title>
     <meta name="author" content="張日雄">
     
     <meta name="description" content="灯塔下的笔者">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <meta property="og:title" content="java.security源码解读系列-PKI"/>
+    <meta property="og:title" content="java.security源码解读系列-PKI.**Key**"/>
     <meta property="og:site_name" content="灯塔下的笔者"/>
 
     
@@ -265,7 +265,7 @@
             <div class="article-title">
                 
     
-        <h1>java.security源码解读系列-PKI</h1>
+        <h1>java.security源码解读系列-PKI.**Key**</h1>
     
 
 
@@ -283,12 +283,14 @@
 
 
             <div class="toc indigo-link-context hide-on-med-and-down">
-    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#PKI"><span class="section table-of-contents-text">PKI</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#PKI的组成"><span class="section table-of-contents-text">PKI的组成</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#总结："><span class="section table-of-contents-text">总结：</span></a></li></ol>
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#PKI"><span class="section table-of-contents-text">PKI</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#PKI的组成"><span class="section table-of-contents-text">PKI的组成</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#KeyStore"><span class="section table-of-contents-text">KeyStore</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#KeyStore使用："><span class="section table-of-contents-text">KeyStore使用：</span></a></li></ol>
 </div>
 
 
             <div class="entry indigo-link-context">
-                <blockquote>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=28702321&auto=1&height=66"><br></iframe>
+
+<blockquote>
 <p>导读：</p>
 <ul>
 <li>这是个人阅读jdk 源码的一个系列，java.security时写的文章，希望写该篇文章，能加深自己对于java语言的理解。</li>
@@ -309,7 +311,7 @@
 <li><strong>公钥加密 Public key encryption（PKE）</strong></li>
 <li><strong>可信的证书颁发机构 CAS</strong></li>
 </ul>
-<p>下面我们来说说密钥：<br>密钥在jdk 中，她主要是是通过 key store 来实现，相关涉及的类都是 XXkeyXX 这类的形式。我们先看看java.security.KeyStore类，在该类的类头部，注释已经说明她是一个用来存储密钥和证书的类或叫数据解构更加合适。<br>在KeyStore中包含了好几个内部类，蛮有意思的，包括Builder内部类数据解构的构建者，<br><strong>CallbackHandlerProtection</strong>,<br><strong>PasswordParameter</strong>,<br><strong>PrivateKeyEntry</strong>, 私钥，一个存储加密过的私钥，用来存储保护的信息，防止非法访问。<br><strong>SecretKeyEntry</strong>, 密钥<br><strong>SimpleLoadStoreParameter</strong>,<br><strong>TrustedCeritificateEntry</strong> 可信任证书，他包含一个单一的公钥，可以供给别人使用，我们称为可信任证书</p>
+<h1 id="KeyStore"><a href="#KeyStore" class="headerlink" title="KeyStore"></a>KeyStore</h1><p>下面我们来说说密钥：<br>密钥在jdk 中，她主要是是通过 key store 来实现，相关涉及的类都是 XXkeyXX 这类的形式。我们先看看java.security.KeyStore类，在该类的类头部，注释已经说明她是一个用来存储密钥和证书的类或叫数据解构更加合适。<br>在KeyStore中包含了好几个内部类，蛮有意思的，包括Builder内部类数据解构的构建者，<br><strong>CallbackHandlerProtection</strong>,<br><strong>PasswordParameter</strong>,<br><strong>PrivateKeyEntry</strong>, 私钥，一个存储加密过的私钥，用来存储保护的信息，防止非法访问。<br><strong>SecretKeyEntry</strong>, 密钥<br><strong>SimpleLoadStoreParameter</strong>,<br><strong>TrustedCeritificateEntry</strong> 可信任证书，他包含一个单一的公钥，可以供给别人使用，我们称为可信任证书</p>
 <p>要学习如何看源码，看源码的注释是必不可少的，幸运的是JKD的源码注释是那么的清晰。哈哈，感谢前人的努力。<br><strong>KeyStore</strong>是用来存储加密密钥和加密证书的存储解构，类的表头注释来了个开门见山。<br><strong>KeyStore</strong>可以支持不同的实体类型的存储结构，每一个类型都实现了内部的一个KeyStore.Entry 接口。<br>它支持一下的几种存储解构类型：</p>
 <ul>
 <li><strong>KeyStore.PrivateKeyEntry</strong><blockquote>
@@ -332,7 +334,7 @@
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">public static final class TrustedCertificateEntry implements Entry &#123;</div><div class="line"></div><div class="line">    private final Certificate cert;</div><div class="line">    private final Set&lt;Attribute&gt; attributes;</div><div class="line">    public TrustedCertificateEntry(Certificate trustedCert) &#123;</div><div class="line">        if (trustedCert == null) &#123;</div><div class="line">            throw new NullPointerException(&quot;invalid null input&quot;);</div><div class="line">        &#125;</div><div class="line">        this.cert = trustedCert;</div><div class="line">        this.attributes = Collections.&lt;Attribute&gt;emptySet();</div><div class="line">    &#125;</div><div class="line">    public TrustedCertificateEntry(Certificate trustedCert,</div><div class="line">       Set&lt;Attribute&gt; attributes) &#123;</div><div class="line">        if (trustedCert == null || attributes == null) &#123;</div><div class="line">            throw new NullPointerException(&quot;invalid null input&quot;);</div><div class="line">        &#125;</div><div class="line">        this.cert = trustedCert;</div><div class="line">        this.attributes =</div><div class="line">            Collections.unmodifiableSet(new HashSet&lt;&gt;(attributes));</div><div class="line">    &#125;</div><div class="line">    public Certificate getTrustedCertificate() &#123;</div><div class="line">        return cert;</div><div class="line">    &#125;</div><div class="line">    @Override</div><div class="line">    public Set&lt;Attribute&gt; getAttributes() &#123;</div><div class="line">        return attributes;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    /**</div><div class="line">     * Returns a string representation of this TrustedCertificateEntry.</div><div class="line">     * @return a string representation of this TrustedCertificateEntry.</div><div class="line">     */</div><div class="line">    public String toString() &#123;</div><div class="line">        return &quot;Trusted certificate entry:\r\n&quot; + cert.toString();</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h1 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h1><p>上述的实体类中，每个Entry都快可以有自己的实体别名。<br>使用KeyStore的一些常用方法：</p>
+<h1 id="KeyStore使用："><a href="#KeyStore使用：" class="headerlink" title="KeyStore使用："></a>KeyStore使用：</h1><p>上述的实体类中，每个Entry都快可以有自己的实体别名。<br>使用KeyStore的一些常用方法：</p>
 <ul>
 <li><p>依赖于默认类型</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">KeyStore ks = KeyStore.getInstance(KeyStore.getDefaultType());</div></pre></td></tr></table></figure>
@@ -347,6 +349,14 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">KeyStore.ProtectionParameter protParam =</div><div class="line">    new KeyStore.PasswordProtection(password);</div><div class="line"></div><div class="line">/** get my private key**/</div><div class="line">KeyStore.PrivateKeyEntry pkEntry = (KeyStore.PrivateKeyEntry)</div><div class="line">    ks.getEntry(&quot;privateKeyAlias&quot;, protParam);</div><div class="line">PrivateKey myPrivateKey = pkEntry.getPrivateKey();</div><div class="line"></div><div class="line">/** save my secret key**/</div><div class="line">javax.crypto.SecretKey mySecretKey;</div><div class="line">KeyStore.SecretKeyEntry skEntry =</div><div class="line">    new KeyStore.SecretKeyEntry(mySecretKey);</div><div class="line">ks.setEntry(&quot;secretKeyAlias&quot;, skEntry, protParam);</div><div class="line"></div><div class="line">/** store away the keystore**/</div><div class="line">try (FileOutputStream fos = new FileOutputStream(&quot;newKeyStoreName&quot;)) &#123;</div><div class="line">    ks.store(fos, password);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 </ul>
+<p>下面，我们在来看看其他的<strong>Key</strong><br>Key 接口：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">/**@author Benjamin Renaud**/</div><div class="line">public interface Key extends java.io.Serializable &#123;</div><div class="line">    static final long serialVersionUID = 6603384152749567654L;</div><div class="line">	public String getAlgorithm(); // 获取加密算法名，如DSA,就是DSA算法的密钥。</div><div class="line">	public String getFormat();// 返回这个key的主要解码格式的名称,</div><div class="line">	public byte[] getEncoded();//返回Key的解码</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在来看看KeyException 类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">/**@author Benjamin Renaud**/</div><div class="line">public class KeyException extends GeneralSecurityException &#123;</div><div class="line">    public KeyException() &#123;</div><div class="line">        super();</div><div class="line">    &#125;</div><div class="line">	public KeyException(String msg) &#123;</div><div class="line">        super(msg);</div><div class="line">    &#125;</div><div class="line">	public KeyException(String message, Throwable cause) &#123;</div><div class="line">        super(message, cause);</div><div class="line">    &#125;</div><div class="line">	public KeyException(Throwable cause) &#123;</div><div class="line">        super(cause);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这是比较常见的异常类，在Key 的算法返回值为null 时会抛出该异常。他的父级异常 GeneralSecurityException 和Exception 类跟他的构造方法类是。</p>
+<p>KeyFactory 类：<br>从名字中，就能知道这是一个工厂方法的类。这个类是在1.2版本中加入的，作者部署本杰明雷，而是Jan Luehe<br>这个类主要是用来做 转换那些并不透明的加密密钥类型的Key，为一些按照特殊规范的透明Key,这是一个双向的过程。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public class KeyFactory&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Idina Menze和Caleb Hyles激情对唱Let It Go：</p>
+<iframe height="498" width="780" src="http://media.w3.org/2010/05/sintel/trailer.mp4" frameborder="0" allowfullscreen></iframe>
+
+
 <blockquote>
 <p>参考文章：<br><a href="http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）</a><br><a href="http://m635674608.iteye.com/blog/1844777（强推荐）" target="_blank" rel="external">http://m635674608.iteye.com/blog/1844777（强推荐）</a><br><a href="http://joshuasabrina.iteye.com/blog/1798245（强推荐）" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1798245（强推荐）</a><br><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）</a><br><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）</a><br><a href="http://www.cnblogs.com/NullPointException/p/5054082.html" target="_blank" rel="external">http://www.cnblogs.com/NullPointException/p/5054082.html</a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p>
 </blockquote>
@@ -363,7 +373,7 @@
         <div class="card">
             <div class="card-content">
                 <!-- Duoshuo Comment BEGIN -->
-                <div class="ds-thread" data-thread-key="2016/11/12/jca/02/" data-title="java.security源码解读系列-PKI" data-url="http://yoursite.com/2016/11/12/jca/02/"></div>
+                <div class="ds-thread" data-thread-key="2016/11/12/jca/02/" data-title="java.security源码解读系列-PKI.**Key**" data-url="http://yoursite.com/2016/11/12/jca/02/"></div>
 
                 <script type="text/javascript">
                     console.log(document.querySelector('.ds-thread'));
@@ -648,6 +658,8 @@
 
 
 
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=a4Ho46rhVw4-PQxU" charset="UTF-8"></script>
 
 
 
