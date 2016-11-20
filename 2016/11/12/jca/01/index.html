@@ -180,7 +180,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/源码阅读/">
-                    源码阅读 <span class="right">3 篇</span></a>
+                    源码阅读 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -188,7 +188,7 @@
 
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/源码阅读/security源码导读系列/">
-                    security源码导读系列 <span class="right">3 篇</span></a>
+                    security源码导读系列 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -203,16 +203,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/心尘随笔/">
-                    心尘随笔 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/大型网站技术架构/">
-                    大型网站技术架构 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/心尘随笔/">
+                    心尘随笔 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -305,6 +305,7 @@
 <li>javax.crypto.spec</li>
 <li>方法javax.crypto.interfaces<br>通过阅java的加解密源码，目的是为了有经验的程序员，希望创建自己的提供程序包提供加密服务的实现。</li>
 </ul>
+<a id="more"></a>
 <h1 id="JCE框架"><a href="#JCE框架" class="headerlink" title="JCE框架"></a>JCE框架</h1><p>jdk自身并没有实现了加解密的主要是jce.jar , jac 主要包括2个软件组件：</p>
 <ul>
 <li>框架，定义并支持加密服务提供商提供实现。该框架包括软件包，比如rt.jar中的java.security中的类，jce.jar 中的javax.crypto 、javax.crypto.spec javax.interfaces</li>
@@ -334,7 +335,7 @@
 <li>Key agreement algorithms 【key协议算法】</li>
 <li>Key generators 【key生成器】</li>
 <li>Message Authentication Codes (MACs) 【消息认证码】</li>
-<li>(Pseudo-)random number generators 【伪随机数生成器】<br>因为历史原因，Cryptography API位于两个独立的包内：<br>java.security(Signature, MessageDigest)和javax.crypto(Cipher, KeyAgreement)。</li>
+<li>(Pseudo-)random number generators 【伪随机数生成器】<br>因为历史原因，Cryptography API位于两个独立的包内：<br>java.security(Signature, MessageDigest)和javax.crypto(Cipher, KeyAgreement)。<br>参考：<a href="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html</a></li>
 </ul>
 <p>Java内置的Provider提供了许多通用的密码算法，比如：RSA, DSA, ECDSA等签名算法、DES, AES, ARCFOUR等加密算法、MD5, SHA-1, SHA-256等信息摘要算法、还有Diffie-Hellman和ECDH这样的密钥协商算法。<br>此外，还有一些特殊的provider。</p>
 <p>比如SunPKCS11， 它允许Java代码无缝地使用PKCS#11的compliant tokens。<br>在Windows平台上，Java还提供了一些native的Provider去连接本地的 Microsoft CryptoAPI。这个provider的名字叫MSCAPI。它允许Java应用无缝地使用Windows平台的cryptographic service。</p>
@@ -392,7 +393,7 @@
 <li>javax.xml.crypto.dsig.dom</li>
 </ul>
 <blockquote>
-<p>参考文章：<br><a href="http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）</a><br><a href="http://m635674608.iteye.com/blog/1844777（强推荐）" target="_blank" rel="external">http://m635674608.iteye.com/blog/1844777（强推荐）</a><br><a href="http://joshuasabrina.iteye.com/blog/1798245（强推荐）" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1798245（强推荐）</a><br><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）</a><br><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）</a><br><a href="http://www.cnblogs.com/NullPointException/p/5054082.html" target="_blank" rel="external">http://www.cnblogs.com/NullPointException/p/5054082.html</a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p>
+<p>参考文章：<br><a href="http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/tech/index-jsp-136007.html</a><br><a href="http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）" target="_blank" rel="external">http://www.ibm.com/developerworks/cn/java/l-secureclass/index.html（强推荐）</a><br><a href="http://m635674608.iteye.com/blog/1844777（强推荐）" target="_blank" rel="external">http://m635674608.iteye.com/blog/1844777（强推荐）</a><br><a href="http://joshuasabrina.iteye.com/blog/1798245（强推荐）" target="_blank" rel="external">http://joshuasabrina.iteye.com/blog/1798245（强推荐）</a><br><a href="http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/6/docs/technotes/guides/security/crypto/CryptoSpec.html（强推荐）</a><br><a href="http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/guides/security/overview/jsoverview.html（强推荐）</a><br><a href="http://www.cnblogs.com/NullPointException/p/5054082.html" target="_blank" rel="external">http://www.cnblogs.com/NullPointException/p/5054082.html</a><br><a href="http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html" target="_blank" rel="external">http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html</a></p>
 </blockquote>
 
             </div>

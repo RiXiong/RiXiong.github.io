@@ -7,7 +7,7 @@
 
     
 
-    <title>归档：2016/11 | 灯塔</title>
+    <title>java.security源码解读系列-消息摘要与数字签名 | 灯塔</title>
     <meta name="author" content="張日雄">
     
     <meta name="description" content="灯塔下的笔者">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="java.security源码解读系列-消息摘要与数字签名"/>
     <meta property="og:site_name" content="灯塔下的笔者"/>
 
     
@@ -241,88 +241,109 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（归档）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/源码阅读/">源码阅读</a><a class="breadcrumb" href="/categories/源码阅读/security源码导读系列/">security源码导读系列</a>
+
+
         
 
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>java.security源码解读系列-消息摘要与数字签名</h1>
+    
 
 
-    <ul class="collapsible mt-0" data-collapsible="accordion">
+            </div>
+            <time class="indigo-link-context" datetime="2016-11-20T14:40:53.703Z"><a href="/2016/11/20/jca/03/">2016-11-20</a></time>
+
+            
+    <div class="tags-row">
         
+            <a href="/tags/jdk源码系列/" class="chip green accent-4">jdk源码系列</a>
         
-            <li>
-                <div class="collapsible-header active">
-                    <i class="fa fa-archive"></i>2016
-                </div>
-                <div class="collapsible-body">
-                    <div class="collection">
-                        
-                            <a href="/2016/11/20/jca/03/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-20T14:40:53.703Z">2016-11-20</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                java.security源码解读系列-消息摘要与数字签名
-                            </a>
-                        
-                            <a href="/2016/11/19/yunwei/1/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-19T03:36:14.505Z">2016-11-19</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Tomcat多实例部署及其原理
-                            </a>
-                        
-                            <a href="/2016/11/18/jca/00/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-18T15:31:52.241Z">2016-11-18</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                java.security源码解读系列-运用加密技术保护Java源代码
-                            </a>
-                        
-                            <a href="/2016/11/12/rob/rob/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-12T13:58:35.006Z">2016-11-12</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                机器学习
-                            </a>
-                        
-                            <a href="/2016/11/12/jca/02/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-12T09:59:03.630Z">2016-11-12</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                java.security源码解读系列-PKI.**Key**
-                            </a>
-                        
-                            <a href="/2016/11/12/jca/01/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-12T09:19:33.936Z">2016-11-12</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                java.security源码解读系列-总体导读
-                            </a>
-                        
-                            <a href="/2016/11/09/2016/11/09/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-08T16:24:41.919Z">2016-11-09</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                工作快一年的回望
-                            </a>
-                        
-                            <a href="/2016/11/07/2016/11/07/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-06T16:25:23.916Z">2016-11-07</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                教你玩博客
-                            </a>
-                        
-                            <a href="/2016/11/06/hello-world/" class="collection-item grey-text text-darken-1">
-                                <time datetime="2016-11-06T14:34:54.758Z">2016-11-06</time>
-                                <span>&nbsp;&nbsp;&nbsp;</span>
-                                Hello World
-                            </a>
-                        
-                    </div>
-                </div>
-            </li>
+            <a href="/tags/security源码导读系列/" class="chip green accent-4">security源码导读系列</a>
         
-    </ul>
+    </div>
+
+
+            <div class="toc indigo-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry indigo-link-context">
+                <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="450" src="http://music.163.com/outchain/player?type=0&id=434934139&auto=1&height=430"></iframe></p>
+<blockquote>
+<p>导读：</p>
+<ul>
+<li>这是个人阅读jdk 源码的一个系列，java.security时写的文章，希望写该篇文章，能加深自己对于java语言的理解。</li>
+<li>本文相关的JDK版本是JDK7,jdk8</li>
+<li>作者：灯塔</li>
+<li>原文： </li>
+</ul>
+</blockquote>
+<p>签名类是用于提供应用程序的功能的数字签名算法。数字签名用于身份验证和完整性保证数字数据。签名算法并不只是局限为DSA sha-1 算法，可以是MD2+RSA DSA+sha-1 这种特殊的结合，还可以加盐等等，签名对象可以用于生成和验证数字签名。<br>Signature对象可以用于生成和验证数字签名。</p>
+<a id="more"></a>
+<p>我们先来看看Signature 类：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/**@author Benjamin Renaud**/</div><div class="line">public abstract class Signature extends SignatureSpi &#123;</div><div class="line">  ....... </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>通过类的继承SignatureSpi 我们知道，Signature 是属于SPI（Service Provider Interface）体系下的，也就是说，他类实现中必然提供了一个 getProvider() 方法，支持签名算法的别名实现。</p>
+<p>在看源码的时候，发现好多这种代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">private static final Debug debug =</div><div class="line">					Debug.getInstance(&quot;jca&quot;, &quot;Signature&quot;);</div><div class="line"></div><div class="line">private static final Debug pdebug =</div><div class="line">					Debug.getInstance(&quot;provider&quot;, &quot;Provider&quot;);</div><div class="line">private static final boolean skipDebug =</div><div class="line">	Debug.isOn(&quot;engine=&quot;) &amp;&amp; !Debug.isOn(&quot;signature&quot;);</div></pre></td></tr></table></figure></p>
+<p>很多Debug.XX() 的实现。这好像是 Java Platform Debugger Architecture  下的东西 ，具体可以看这里：<a href="http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jdb.html" target="_blank" rel="external">http://docs.oracle.com/javase/7/docs/technotes/tools/windows/jdb.html</a><br>是securiy 下面的一个工具类：</p>
+<p>Signature 对象是一个抽象类，意味这他必然要被继承。<br>我们再次具体的看看他的源码实现<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">/**@author Benjamin Renaud**/</div><div class="line">public abstract class Signature extends SignatureSpi &#123;</div><div class="line">   private String algorithm;</div><div class="line">   /**The provider 包内可见**/</div><div class="line">   Provider provider;</div><div class="line">   </div><div class="line">   private final static Map&lt;String,Boolean&gt; signatureInfo;</div><div class="line"></div><div class="line">   static &#123;</div><div class="line">        signatureInfo = new ConcurrentHashMap&lt;String,Boolean&gt;();</div><div class="line">        Boolean TRUE = Boolean.TRUE;</div><div class="line">        // pre-initialize with values for our SignatureSpi implementations</div><div class="line">        signatureInfo.put(&quot;sun.security.provider.DSA$RawDSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.provider.DSA$SHA1withDSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$MD2withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$MD5withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$SHA1withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$SHA256withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$SHA384withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.rsa.RSASignature$SHA512withRSA&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;com.sun.net.ssl.internal.ssl.RSASignature&quot;, TRUE);</div><div class="line">        signatureInfo.put(&quot;sun.security.pkcs11.P11Signature&quot;, TRUE);</div><div class="line">   &#125;</div><div class="line">   </div><div class="line">   public final void initSign(PrivateKey privateKey)</div><div class="line">            throws InvalidKeyException &#123;</div><div class="line">        engineInitSign(privateKey);</div><div class="line">        state = SIGN;</div><div class="line"></div><div class="line">        if (!skipDebug &amp;&amp; pdebug != null) &#123;</div><div class="line">            pdebug.println(&quot;Signature.&quot; + algorithm +</div><div class="line">                &quot; signing algorithm from: &quot; + this.provider.getName());</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">	</div><div class="line">	//这里有一个加密适配器，将来会废除</div><div class="line">    @SuppressWarnings(&quot;deprecation&quot;)</div><div class="line">    private static class CipherAdapter extends SignatureSpi &#123;</div><div class="line"></div><div class="line">        private final Cipher cipher;</div><div class="line"></div><div class="line">        private ByteArrayOutputStream data;</div><div class="line">	｝	</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>参考：<br><a href="http://www.cnblogs.com/jingmoxukong/p/5700906.html" target="_blank" rel="external">http://www.cnblogs.com/jingmoxukong/p/5700906.html</a><br><a href="http://www.cnblogs.com/jingmoxukong/p/5688306.html" target="_blank" rel="external">http://www.cnblogs.com/jingmoxukong/p/5688306.html</a></p>
+</blockquote>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/11/20/jca/03/" data-title="java.security源码解读系列-消息摘要与数字签名" data-url="http://yoursite.com/2016/11/20/jca/03/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'jbeacon'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>

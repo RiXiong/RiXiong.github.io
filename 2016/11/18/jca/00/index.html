@@ -180,7 +180,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/源码阅读/">
-                    源码阅读 <span class="right">3 篇</span></a>
+                    源码阅读 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -188,7 +188,7 @@
 
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/源码阅读/security源码导读系列/">
-                    security源码导读系列 <span class="right">3 篇</span></a>
+                    security源码导读系列 <span class="right">4 篇</span></a>
                 </a>
             </li>
 
@@ -203,16 +203,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/心尘随笔/">
-                    心尘随笔 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/大型网站技术架构/">
-                    大型网站技术架构 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/心尘随笔/">
+                    心尘随笔 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -306,6 +306,7 @@
 <p>这为我们编写定制的ClassLoader提供了一条捷径，减少了麻烦：只需覆盖findClass，而不是覆盖loadClass。这种方法避免了重复所有装入器必需执行的公共步骤，因为这一切由loadClass负责。</p>
 <p>不过，本文的定制ClassLoader并不使用这种方法。原因很简单。如果由默认的ClassLoader先寻找经过加密的类文件，它可以找到；但由于类文件已经加密，所以它不会认可这个类文件，装入过程将失败。因此，我们必须自己实现loadClass，稍微增加了一些工作量。</p>
 <hr>
+<a id="more"></a>
 <h1 id="定制类装入器"><a href="#定制类装入器" class="headerlink" title="定制类装入器"></a>定制类装入器</h1><p>每一个运行着的JVM已经拥有一个ClassLoader。这个默认的ClassLoader根据CLASSPATH环境变量的值，在本地文件系统中寻找合适的字节码文件。</p>
 <p>应用定制ClassLoader要求对这个过程有较为深入的认识。我们首先必须创建一个定制ClassLoader类的实例，然后显式地要求它装入另外一个类。这就强制JVM把该类以及所有它所需要的类关联到定制的ClassLoader。Listing 1显示了如何用定制ClassLoader装入类文件。<br>【Listing 1：利用定制的ClassLoader装入类文件】<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/** 首先创建一个ClassLoader对象 **/</div><div class="line">ClassLoader myClassLoader = new myClassLoader();</div><div class="line">/** 利用定制ClassLoader对象装入类文件 **/</div><div class="line">/** 并把它转换成Class对象 **/</div><div class="line">Class myClass = myClassLoader.loadClass( &quot;mypackage.MyClass&quot; );</div><div class="line">/** 最后，创建该类的一个实例 **/</div><div class="line">Object newInstance = myClass.newInstance();</div><div class="line">/** 注意，MyClass所需要的所有其他类，都将通过 **</div><div class="line">/** 定制的ClassLoader自动装入 **/</div></pre></td></tr></table></figure></p>
 <p>如前所述，定制ClassLoader只需先获取类文件的数据，然后把字节码传递给运行时系统，由后者完成余下的任务。</p>
