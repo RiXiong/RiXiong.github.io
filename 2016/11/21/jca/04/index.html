@@ -7,7 +7,7 @@
 
     
 
-    <title>tomcat | 灯塔</title>
+    <title>消息摘要与数字签名(补充基础知识) | 灯塔</title>
     <meta name="author" content="張日雄">
     
     <meta name="description" content="灯塔下的笔者">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="消息摘要与数字签名(补充基础知识)"/>
     <meta property="og:site_name" content="灯塔下的笔者"/>
 
     
@@ -241,30 +241,93 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/源码阅读/">源码阅读</a><a class="breadcrumb" href="/categories/源码阅读/security源码导读系列/">security源码导读系列</a>
+
 
         
-            <a class="breadcrumb" href="/tags/tomcat/">tomcat</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>消息摘要与数字签名(补充基础知识)</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="indigo-link-context" datetime="2016-11-21T13:59:09.490Z"><a href="/2016/11/21/jca/04/">2016-11-21</a></time>
+
+            
+    <div class="tags-row">
         
-            <a href="/2016/11/19/yunwei/1/" class="collection-item grey-text text-darken-1">
-                <time datetime="2016-11-19T03:36:14.505Z">2016-11-19</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                Tomcat多实例部署及其原理
-            </a>
+            <a href="/tags/jdk源码系列/" class="chip green accent-4">jdk源码系列</a>
+        
+            <a href="/tags/security源码导读系列/" class="chip green accent-4">security源码导读系列</a>
         
     </div>
+
+
+            <div class="toc indigo-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#1、消息摘要"><span class="section table-of-contents-text">1、消息摘要</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#定义"><span class="section table-of-contents-text">定义</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#特点"><span class="section table-of-contents-text">特点</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#常用算法"><span class="section table-of-contents-text">常用算法</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#2、数字签名"><span class="section table-of-contents-text">2、数字签名</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#算法简述"><span class="section table-of-contents-text">算法简述</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#特点-1"><span class="section table-of-contents-text">特点</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry indigo-link-context">
+                <blockquote>
+<p>导读：<br>在读java.security 源码时，发现有很多不懂的地方，需要补充一下基础知识。这章节主要说说Java安全的<strong>消息摘要</strong> 和 <strong>数字签名</strong> 的内容。</p>
+</blockquote>
+<h1 id="1、消息摘要"><a href="#1、消息摘要" class="headerlink" title="1、消息摘要"></a>1、消息摘要</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>他是有一个唯一对一个消息或文本的固定长度的值。它是由一个单向的Hash加密函数对消息进行作用而产生。如果消息在途中改变了，则接收者通过对收到消息的新产生的摘要与原摘要比较，就可知道消息是否被改变了。因此消息摘要保证了消息的完整性。消息摘要采用单向Hash 函数将需加密的明文”摘要”成一串密文，这一串密文亦称为数字指纹(Finger Print)。它有固定的长度，且不同的明文摘要成密文，其结果总是不同的，而同样的明文其摘要必定一致。这样这串摘要便可成为验证明文是否是”真身”的”指纹”了。<br>类是MD5加密，明文摘要成密文，过程不可逆，但密文是唯一的，只需要对比密文的一致性，就能知道原来的明文有没有因为远程传输而改变。</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><h2 id="常用算法"><a href="#常用算法" class="headerlink" title="常用算法"></a>常用算法</h2><h1 id="2、数字签名"><a href="#2、数字签名" class="headerlink" title="2、数字签名"></a>2、数字签名</h1><h2 id="算法简述"><a href="#算法简述" class="headerlink" title="算法简述"></a>算法简述</h2><h2 id="特点-1"><a href="#特点-1" class="headerlink" title="特点"></a>特点</h2>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/11/21/jca/04/" data-title="消息摘要与数字签名(补充基础知识)" data-url="http://yoursite.com/2016/11/21/jca/04/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'jbeacon'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
 
 
 </div>
