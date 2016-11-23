@@ -195,16 +195,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/日常技术/">
-                    日常技术 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/大型网站技术架构/">
-                    大型网站技术架构 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/日常技术/">
+                    日常技术 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -328,8 +328,16 @@
 
 
             
+                <div class="entry indigo-link-context">
+                    <p><a href="http://img2.tuicool.com/3mMjAf.jpg!web"><img src="http://img2.tuicool.com/3mMjAf.jpg!web" alt="" title="title"></a><br>
+                </div>
+            
         </div>
 
+        
+        <div class="card-action indigo-link-context">
+            <a href="/2016/11/21/jca/04/">READ MORE</a>
+        </ div>
         
     </div>
 </article>
@@ -412,8 +420,28 @@
 
 
             
+                <div class="entry indigo-link-context">
+                    <blockquote>
+<p>导读：<br>昨天在跟群友做技术交流的时候,了解到，有很多大公司都是采用了高可用的，分布式的，实例沉余1+台。但是在小公司的同学也很多，他们反映并不是所有公司都有那样的资源来供你调度。往往公司只会给你一台机器，因为有些应用挂了公司也不会有损失的，我们往往一台机器就可以搞定。<br>但是，我们也要为我们做出来的应用负责，毕竟东西做出来是为了给人用的，如果做出来的东西经常挂了，谈何使用，在前期，如果公司资源紧张的情况下，可以不可以做高可用，多机器的沉余部署。但是至少是在但机上有2个进程在跑。so,在这里我们就说说这个，如何做单机多实例的部署。<br>在这里谈谈，在只有单机的资源下，如何把单机的资源压榨出来，用好单机。</p>
+</blockquote>
+<hr>
+<h1 id="1、Tomcat部署的场景分析"><a href="#1、Tomcat部署的场景分析" class="headerlink" title="1、Tomcat部署的场景分析"></a>1、Tomcat部署的场景分析</h1><p>通常，我们对tomcat单机部署需求可以分为几种：</p>
+<ul>
+<li>单实例单应用 (一个tomcat 一个web应用)</li>
+<li>单实例多应用 (一个tomcat多个应用)</li>
+<li>多实例单应用 (多个tomcat都部署一个应用)</li>
+<li>多实例多应用 (多个tomcat部署多个不同的应用)</li>
+</ul>
+<p><strong>第一种场景</strong>：这是我们开发中经常用到的，如果不要求周期性地维护tomcat版本，一般的做法是把打好的war包丢到webapps目录下，然后执行startup.sh脚本，并且可以在浏览器里访问就行了。<br><strong>第二种场景</strong>：是把多个应用程序的war包放在同一个tomcat的webapps目录，这样一来，关闭和启动tomca，或tomcat挂掉会影响所有项目。<br><strong>第三种场景</strong>: 各个tomcat都运行同一个应用程序，对应地需要修改不同的监听端口，这种方式通常会和apache httpd或者nginx整合使用，做一些负载均衡的处理。<br><strong>第四种场景</strong>: 相当于第一种场景的复数形式，除了修改不同的监听端口，没有本质区别。</p>
+<p>一般来说，多实例部署tomcat，可以充分利用系统资源，不过这种方式，也有几个方面需要考虑：<br>多实例tomcat的更新维护，例如对tomcat进行升级等操作，我们需要考虑如何能“优雅”地对所有实例进行升级<br>尽量不要影响应用程序，在更新tomcat时，一不小心就把conf目录等全部覆盖，所以尽量要把配置文件和安装目录隔离<br>对于单应用来说，如果将war包分别置于各个tomcat的webapps目录，那么在发布新版本的war时，可能会出现某个实例更新失败，导致用户在访问时可能会访问到不同版本的web app，因此，<strong>比较好的方式就是所有tomcat实例都统一指向同一个应用程序</strong>，这样做，就可以多个tomcat用一份应用源码，简单部署，单机高可用也能实现（要配合nginx）.<br>本文重点阐述多实例应用的部署方案，但是为了解决上述几个问题，我们需要先来了解一下tomcat的一些基本情况。</p>
+                </div>
+            
         </div>
 
+        
+        <div class="card-action indigo-link-context">
+            <a href="/2016/11/19/yunwei/1/">READ MORE</a>
+        </ div>
         
     </div>
 </article>

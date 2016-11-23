@@ -195,16 +195,16 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/日常技术/">
-                    日常技术 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/大型网站技术架构/">
-                    大型网站技术架构 <span class="right">1 篇</span></a>
+                <a class="no-padding" href="/categories/日常技术/">
+                    日常技术 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -301,6 +301,7 @@
 </ul>
 <p><strong>第一种场景</strong>：这是我们开发中经常用到的，如果不要求周期性地维护tomcat版本，一般的做法是把打好的war包丢到webapps目录下，然后执行startup.sh脚本，并且可以在浏览器里访问就行了。<br><strong>第二种场景</strong>：是把多个应用程序的war包放在同一个tomcat的webapps目录，这样一来，关闭和启动tomca，或tomcat挂掉会影响所有项目。<br><strong>第三种场景</strong>: 各个tomcat都运行同一个应用程序，对应地需要修改不同的监听端口，这种方式通常会和apache httpd或者nginx整合使用，做一些负载均衡的处理。<br><strong>第四种场景</strong>: 相当于第一种场景的复数形式，除了修改不同的监听端口，没有本质区别。</p>
 <p>一般来说，多实例部署tomcat，可以充分利用系统资源，不过这种方式，也有几个方面需要考虑：<br>多实例tomcat的更新维护，例如对tomcat进行升级等操作，我们需要考虑如何能“优雅”地对所有实例进行升级<br>尽量不要影响应用程序，在更新tomcat时，一不小心就把conf目录等全部覆盖，所以尽量要把配置文件和安装目录隔离<br>对于单应用来说，如果将war包分别置于各个tomcat的webapps目录，那么在发布新版本的war时，可能会出现某个实例更新失败，导致用户在访问时可能会访问到不同版本的web app，因此，<strong>比较好的方式就是所有tomcat实例都统一指向同一个应用程序</strong>，这样做，就可以多个tomcat用一份应用源码，简单部署，单机高可用也能实现（要配合nginx）.<br>本文重点阐述多实例应用的部署方案，但是为了解决上述几个问题，我们需要先来了解一下tomcat的一些基本情况。</p>
+<a id="more"></a>
 <h1 id="2、我们的目标"><a href="#2、我们的目标" class="headerlink" title="2、我们的目标"></a>2、我们的目标</h1><p><a href="http://www.itnose.net/img/20161025/172338.png" target="_blank" rel="external"><img src="http://www.itnose.net/img/20161025/172338.png" alt="tomcat架构" title="title"></a></p>
 <hr>
 <h1 id="3、tomcat架构"><a href="#3、tomcat架构" class="headerlink" title="3、tomcat架构"></a>3、tomcat架构</h1><h2 id="整体架构图"><a href="#整体架构图" class="headerlink" title="整体架构图"></a>整体架构图</h2><p><a href="http://www.itnose.net/img/20160411/10674534.gif" target="_blank" rel="external"><img src="http://www.itnose.net/img/20160411/10674534.gif" alt="tomcat架构" title="title"></a></p>
