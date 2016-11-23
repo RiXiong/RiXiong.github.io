@@ -1,0 +1,68 @@
+{
+    "define": {
+	    "readed": "已读",
+        "reading": "在读",
+        "wanted": "想读"
+    },
+    "contents": {
+        "readed": [{
+            "title": "代码之外的生存指南",
+            "cover": "https://img3.doubanio.com/lpic/s28889106.jpg",
+            "review": "IT菜鸟出社会，必看。",
+            "score": "7",
+            "doubanLink": "https://book.douban.com/subject/26835090/"
+        }, {
+            "title": "极客与团队：软件工程师的团队生存秘笈",
+            "cover": "https://img3.doubanio.com/lpic/s28889106.jpg",
+            "review": "书很薄，但内容相当实用。",
+            "score": "8.5",
+            "doubanLink": "https://read.douban.com/ebook/12766781/"
+        }, {
+            "title": "影响力：卡耐基最实用的说服术与社交技巧",
+            "cover": "https://img3.doubanio.com/lpic/s28889106.jpg",
+            "review": "强烈推荐阅读，而且越早看受益越多！",
+            "score": "9.5",
+            "doubanLink": "https://read.douban.com/ebook/12233881/?icn=profile-guess"
+        }],
+		
+		"reading": [{
+            "title": "分布式服务框架：原理与实践",
+            "cover": "https://img3.doubanio.com/lpic/s28378000.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://book.douban.com/subject/26702824/"
+        },{
+            "title": "深入理解Java虚拟机：JVM高级特性与最佳实践",
+            "cover": "https://img3.doubanio.com/lpic/s28889106.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://read.douban.com/ebook/15233695/?dcs=subject-rec&dcm=douban&dct=24700704"
+        },{
+            "title": "Spring in Action",
+            "cover": "https://img3.doubanio.com/lpic/s28010344.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://book.douban.com/subject/24830012/"
+        }],
+
+        "wanted": [{
+            "title": "实战Java虚拟机",
+            "cover": "https://img3.doubanio.com/lpic/s28036503.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://book.douban.com/subject/26354292/"
+        },{
+            "title": "Netty in Action",
+            "cover": "https://img3.doubanio.com/lpic/s28361212.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://book.douban.com/subject/24700704/"
+        },{
+            "title": "Spring Boot in Action",
+            "cover": "https://img3.doubanio.com/lpic/s28376225.jpg",
+            "review": "",
+            "score": null,
+            "doubanLink": "https://book.douban.com/subject/26435858/"
+        }]
+    }
+}
