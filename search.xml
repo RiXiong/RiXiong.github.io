@@ -642,21 +642,21 @@
     
     <entry>
       <title><![CDATA[工作快一年的回望]]></title>
-      <url>http://jbeacon.top/2016/11/09/2016/11/09/</url>
+      <url>http://jbeacon.top/2016/11/09/other/01/</url>
       <content type="html"><![CDATA[<p>不知不觉，我离开校门参不多快1年了，在出校门后遇到的林林总总，磕磕碰碰，繁琐心事。在蹉跎的工作中，一个毛头小子，初涉社会，不懂世故。<br>想想都是一把心酸泪。不开心的事，就不提了，在这里我说说我大学四年的总结吧，也好给自己一个交代，没白学。</p>
 ]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[教你玩博客]]></title>
-      <url>http://jbeacon.top/2016/11/07/2016/11/07/</url>
+      <url>http://jbeacon.top/2016/11/07/guid/07/</url>
       <content type="html"><![CDATA[<p>大家好，我是灯塔下的笔者，很高兴您能访问我的博客。</p>
 <h2 id="Quick-Start1"><a href="#Quick-Start1" class="headerlink" title="Quick Start1"></a>Quick Start1</h2><h2 id="Quick-Start2"><a href="#Quick-Start2" class="headerlink" title="Quick Start2"></a>Quick Start2</h2>]]></content>
     </entry>
     
     <entry>
       <title><![CDATA[Hello World]]></title>
-      <url>http://jbeacon.top/2016/11/06/hello-world/</url>
+      <url>http://jbeacon.top/2016/11/06/guid/hello-world/</url>
       <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
@@ -676,6 +676,7 @@
       <title><![CDATA[关于]]></title>
       <url>http://jbeacon.top/about/index.html</url>
       <content type="html"><![CDATA[<p>大家好，我是張日雄。欢迎来到我的个人技术博客。<br>个人主攻后端和技术架构,但懂点前端,会点运维，白天上班族，晚上知识的分享者。<br>高隔壁的叫全栈，土气点的叫万金油，伟大点的叫救火队员，实在点的叫打杂。<br>笔者不是什么技术大牛，写代码也不厉害，只是万花丛中一点绿，但会思考，会努力，要求未来的我比现在的我要好，一位心态阳光的奋斗者。在此总结我的个人成长经验有三点：善于观察、乐于解决问题、善于总结。<br>希望通过该博客总结自己的经验，积累知识。</p>
+<p>个人写博客的目的，不是对技术的纯粹最求，尽管我是个技术爱好者，但我更爱生活，更愿意把当前的工作做好，so,为了干好当前的工作，我需要不断的驱动自己去学习，以此来完成当前或我未来将要解决一些问题的知识储备。<br>通过写这博客，我也不是太伟大，热衷于分享，我是个懒人，耐心不好（这也许是患了程序员症）。只是想在工作的时候，不想太费耐心讨论，教导，把文章一扔了事。<br>当然，在写文的过程中，我的表达能力和写作能力也得到了很大的提高。</p>
 ]]></content>
     </entry>
     

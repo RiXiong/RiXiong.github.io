@@ -1,0 +1,690 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>lang包之 System | 灯塔</title>
+    <meta name="author" content="張日雄">
+    
+    <meta name="description" content="灯塔下的笔者">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="lang包之 System"/>
+    <meta property="og:site_name" content="灯塔下的笔者"/>
+
+    
+    <meta property="og:image" content="undefined"/>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="灯塔下的笔者" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">灯塔下的笔者</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/reading" >
+                            <i class="fa fa-book "></i>
+                            
+                            读书
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/css/images/avert.png" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">灯塔</p>
+                        <p class="desc">灯塔下的笔者</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/reading" >
+                    <i class="fa fa-book "></i>
+                    
+                    读书
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/源码阅读/">
+                    源码阅读 <span class="right">7 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/源码阅读/security源码导读系列/">
+                    security源码导读系列 <span class="right">5 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/源码阅读/lang包/">
+                    lang包 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/源码阅读/JUC源码/">
+                    JUC源码 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/日常技术/">
+                    日常技术 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/心尘随笔/">
+                    心尘随笔 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/翻译/">
+                    翻译 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/爱上烧菜/">
+                    爱上烧菜 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/爱上烧菜/熟食/">
+                    熟食 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/教程/">
+                    教程 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/源码阅读/">源码阅读</a><a class="breadcrumb" href="/categories/源码阅读/lang包/">lang包</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>lang包之 System</h1>
+    
+
+
+            </div>
+            <time class="indigo-link-context" datetime="2016-11-27T11:48:04.754Z"><a href="/2016/11/27/java.lang/01/">2016-11-27</a></time>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/jdk源码系列/" class="chip green accent-4">jdk源码系列</a>
+        
+            <a href="/tags/java/" class="chip green accent-4">java</a>
+        
+    </div>
+
+
+            <div class="toc indigo-link-context hide-on-med-and-down">
+    
+</div>
+
+
+            <div class="entry indigo-link-context">
+                <blockquote>
+<p>导读：</p>
+<ul>
+<li>作者: 灯塔</li>
+<li>源码：jdk1.8</li>
+</ul>
+</blockquote>
+<p>在我们初学习编程之处，就我来说，我一开始接触编程的语言是c语言，我相信大多数科班出身的都跟我一样，首先学习的是print(“Hello World”).<br>在我学习java时，我也是如此，毕竟学习过一门语言，再学习其他就很好的掌握方法了。<br>在java 学习中， 我们是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.out.println(&quot;Hello world!“);</div></pre></td></tr></table></figure></p>
+<p>当年学习的时候，会个Hello world! 对我来说已经是件兴奋不已的事情，却并没有好好的看看<strong>System</strong>中的源码</p>
+<p><strong>System</strong>的类，包含了几个有用的属性，和方法，他们不能被实例化，下面这些方法都是<strong>System</strong>类所提供的。<br>如：标准的输入流，标准的输出流，以及错误的输出流，和一些扩展定义的属性和环境变量方法。都是加载文件和库的一种手段，一个实用程序的方法和快速复制数组的一部分。</p>
+<p>先过目一下，这个牛叉的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">public final class System &#123;</div><div class="line">   /** openjdk 能找到这个cpp 文件**/</div><div class="line">   private static native void registerNatives();</div><div class="line">   static &#123;</div><div class="line">      registerNatives();</div><div class="line">   &#125;   </div><div class="line">   /** 防止被实例化**/</div><div class="line">   private System() &#123;&#125;</div><div class="line">   public final static InputStream in = null;</div><div class="line">   public final static PrintStream out = null;</div><div class="line">   public final static PrintStream err = null;</div><div class="line">   /** 允许实现安全策略 **/</div><div class="line">   private static volatile SecurityManager security = null;</div><div class="line">   ......</div><div class="line">   ......</div><div class="line">   public static Console console() &#123;</div><div class="line">         if (cons == null) &#123;</div><div class="line">             synchronized (System.class) &#123;</div><div class="line">                 cons = sun.misc.SharedSecrets.getJavaIOAccess().console();</div><div class="line">             &#125;</div><div class="line">         &#125;</div><div class="line">         return cons;</div><div class="line">   &#125;</div><div class="line">   ......</div><div class="line">   ......</div><div class="line">   public static</div><div class="line">   void setSecurityManager(final SecurityManager s) &#123;</div><div class="line">        try &#123;</div><div class="line">            s.checkPackageAccess(&quot;java.lang&quot;);</div><div class="line">        &#125; catch (Exception e) &#123;</div><div class="line">        &#125;</div><div class="line">        setSecurityManager0(s);</div><div class="line">    &#125;</div><div class="line">    private static synchronized</div><div class="line">    void setSecurityManager0(final SecurityManager s) &#123;</div><div class="line">        SecurityManager sm = getSecurityManager();</div><div class="line">        if (sm != null) &#123;</div><div class="line">            sm.checkPermission(new RuntimePermission</div><div class="line">                                     (&quot;setSecurityManager&quot;));</div><div class="line">        &#125;</div><div class="line">        if ((s != null) &amp;&amp; (s.getClass().getClassLoader() != null)) &#123;      </div><div class="line">            AccessController.doPrivileged(new PrivilegedAction&lt;Object&gt;() &#123;</div><div class="line">                public Object run() &#123;</div><div class="line">                    s.getClass().getProtectionDomain().implies</div><div class="line">                        (SecurityConstants.ALL_PERMISSION);</div><div class="line">                    return null;</div><div class="line">                &#125;</div><div class="line">            &#125;);</div><div class="line">        &#125;</div><div class="line">        security = s;</div><div class="line">    &#125;</div><div class="line">	/** 毫秒 **/</div><div class="line">	public static native long currentTimeMillis();</div><div class="line">	/** 纳秒 **/</div><div class="line">	public static native long nanoTime();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>此外，在System中也提供了数组的复制功能<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public static native void arraycopy(Object src,  int  srcPos,</div><div class="line">                                    Object dest, int destPos,</div><div class="line">                                    int length);</div></pre></td></tr></table></figure></p>
+<ul>
+<li>@param      src  : 表示源数组（将要被复制的）</li>
+<li>@param      srcPos 复制src数组的起点</li>
+<li>@param      dest   目标数组，被改变的</li>
+<li>@param      destPos 目标数组的复制起点</li>
+<li>@param      length 复制目标数组的个数<br>例如：我们可以这样使用System.arraycopy(…)<br>int[] a = {1,2,3,4,5,6,7};<br>int[] b = {9,8,7,6};<br>System.arraycopy(a, 2, b,0,2)<br>b的结果为：[9,2,3,6]</li>
+</ul>
+<p>此外，<strong>System</strong> 还提供了一个非常重要的特性，那就是<strong>Properties props</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">private static Properties props;</div><div class="line">private static native Properties initProperties(Properties props);</div></pre></td></tr></table></figure>
+<p>下面这些属性，已经在JVM中被实现了:</p>
+<ul>
+<li>java.version ： java 版本号</li>
+<li>java.vendor ：Java供应商特定的字符串</li>
+<li>java.vendor.url：Java厂商的网址</li>
+<li>java.home  ： Java 安装目录</li>
+<li>java.class.version ： Java类版本号</li>
+<li>java.class.path  ：Java 类路径</li>
+<li>os.name  ： 操作系统的名称</li>
+<li>os.arch ： 操作系统的架构</li>
+<li>os.version  ： 操作系统的版本号</li>
+<li>file.separator  ： 文件分割符号</li>
+<li>path.separator  ： 路径分割符</li>
+<li>line.separator  ： 行分割符</li>
+<li>user.name ： 用户名称</li>
+<li>user.home ： 用户根目录</li>
+<li>user.dir  用户当前工作目录</li>
+</ul>
+<p>我们一般会这样使用，同过System 可以有效的获取我们当前系统的环境的一些信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">System.getProperty(&quot;os.name&quot;);</div></pre></td></tr></table></figure></p>
+<p>其他的类似.</p>
+<p>System 中还有这样的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">public static void gc() &#123;</div><div class="line">    Runtime.getRuntime().gc();</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>在执行System.gc() 的时候，会触发一下这样的JVM的垃圾回收。</p>
+<p>总结：给出一套工具类的代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">public class SystemUtils &#123;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 系统默认字符集UTF-8。</div><div class="line">     */</div><div class="line">    public static final Charset DEFAULT_CHARSET = Charset.forName(&quot;utf-8&quot;);</div><div class="line">    </div><div class="line">    //内部引用，保证初始化。</div><div class="line">    private static String lp;</div><div class="line">    </div><div class="line">    static &#123;</div><div class="line">        ByteArrayOutputStream bos = new ByteArrayOutputStream(2);</div><div class="line">        PrintWriter writer = new PrintWriter(bos, true);</div><div class="line">        writer.println();</div><div class="line">        lp = new String(bos.toByteArray());</div><div class="line">        writer.close();</div><div class="line">        if(lp == null) &#123;</div><div class="line">            lp = new String(new byte[]&#123;&apos;\r&apos;,&apos;\n&apos;&#125;);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * lineSeparator</div><div class="line">     */</div><div class="line">    public static final String LINESEPARATOR = lp;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM名称。</div><div class="line">     * </div><div class="line">     * @return 当前JVM名称。</div><div class="line">     */</div><div class="line">    public static String getJavaVMName() &#123;</div><div class="line">        return System.getProperty(&quot;java.vm.name&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM版本。</div><div class="line">     * </div><div class="line">     * @return  当前JVM版本。</div><div class="line">     */</div><div class="line">    public static String getJavaVMVersion() &#123;</div><div class="line">        return System.getProperty(&quot;java.vm.version&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM厂商。</div><div class="line">     * </div><div class="line">     * @return 当前JVM厂商。</div><div class="line">     */</div><div class="line">    public static String getJavaVMVendor() &#123;</div><div class="line">        return System.getProperty(&quot;java.vm.vendor&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前Java版本。</div><div class="line">     * </div><div class="line">     * @return 当前Java版本。</div><div class="line">     */</div><div class="line">    public static String getJavaVersion() &#123;</div><div class="line">        return System.getProperty(&quot;java.version&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前临时目录。</div><div class="line">     * </div><div class="line">     * @return 系统当前临时目录。</div><div class="line">     */</div><div class="line">    public static String getTempDir() &#123;</div><div class="line">        return System.getProperty(&quot;java.io.tmpdir&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前操作系统的名称。</div><div class="line">     * </div><div class="line">     * @return  </div><div class="line">     *      当前操作系统名称。</div><div class="line">     */</div><div class="line">    public static String getOsName() &#123;</div><div class="line">        return System.getProperty(&quot;os.name&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前操作系统版本。</div><div class="line">     * </div><div class="line">     * @return  </div><div class="line">     *      当前操作系统版本。</div><div class="line">     */</div><div class="line">    public static String getOsVersion() &#123;</div><div class="line">        return System.getProperty(&quot;os.version&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前系统用户名称。</div><div class="line">     * </div><div class="line">     * @return  </div><div class="line">     *      当前系统用户名称。</div><div class="line">     */</div><div class="line">    public static String getUserName() &#123;</div><div class="line">        return System.getProperty(&quot;user.name&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JavaHome。</div><div class="line">     * </div><div class="line">     * @return  当前JavaHome, 如果没有则返回null。</div><div class="line">     */</div><div class="line">    public static String getJavaHome() &#123;</div><div class="line">        return System.getProperty(&quot;java.home&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取CPU数据模型（32位还是64位，即寻址空间大小）。</div><div class="line">     * </div><div class="line">     * @return </div><div class="line">     *      CPU数据模型（32位还是64位）。</div><div class="line">     */</div><div class="line">    public static String getArchDataMode() &#123;</div><div class="line">        return System.getProperty(&quot;sun.arch.data.model&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前语言环境。</div><div class="line">     * </div><div class="line">     * @return 当前语言环境，如：zh。</div><div class="line">     */</div><div class="line">    public static String getUserLanguage() &#123;</div><div class="line">        return System.getProperty(&quot;user.language&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取文件分隔符。</div><div class="line">     * </div><div class="line">     * @return 文件分隔符。</div><div class="line">     */</div><div class="line">    public static String getFileSeparator() &#123;</div><div class="line">        return System.getProperty(&quot;file.separator&quot;);</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取处理器数量（CPU核心数量）。</div><div class="line">     * </div><div class="line">     * @return 处理器数量。</div><div class="line">     */</div><div class="line">    public static int getProcessorCount() &#123;</div><div class="line">        return Runtime.getRuntime().availableProcessors();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM空闲内存。</div><div class="line">     * </div><div class="line">     * @return 当前JVM空闲内存，单位（字节）。</div><div class="line">     */</div><div class="line">    public static long getFreeMemory() &#123;</div><div class="line">        return Runtime.getRuntime().freeMemory();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM最大内存</div><div class="line">     * </div><div class="line">     * @return 当前JVM最大内存，单位（字节）。</div><div class="line">     */</div><div class="line">    public static long getMaxMemory() &#123;</div><div class="line">        return  Runtime.getRuntime().maxMemory();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * &lt;p&gt;获取当前JVM总内存</div><div class="line">     * &lt;p&gt;总内存可以不等于最大内存，取决于JVM的设置（参见-Xms -Xmx等参数），当</div><div class="line">     * 最小内存不等于最大内存时，内存空间可扩展。</div><div class="line">     * </div><div class="line">     * @return </div><div class="line">     */</div><div class="line">    public static long getTotalMemory() &#123;</div><div class="line">        return Runtime.getRuntime().totalMemory();</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 打印当前所有线程栈追踪信息。</div><div class="line">     */</div><div class="line">    public static void printAllStackTrack() &#123;</div><div class="line">        Map&lt;Thread, StackTraceElement[]&gt; stMap = Thread.getAllStackTraces();</div><div class="line">        for(Thread thread : stMap.keySet()) &#123;</div><div class="line">            StackTraceElement[] elements = stMap.get(thread);</div><div class="line">            System.out.println(thread);</div><div class="line">            for (StackTraceElement element : elements) &#123;</div><div class="line">                System.out.println(&quot;    &quot;+element);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM运行时间（从启动到当前的时间）。</div><div class="line">     * </div><div class="line">     * @return </div><div class="line">     *      当前JVM启动时间，单位（毫秒）。</div><div class="line">     */     </div><div class="line">    public static long getJavaVMUptime() &#123;</div><div class="line">        // throw new UnsupportedOperationException();  </div><div class="line">        RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();</div><div class="line">        if(runtimeMXBean != null)&#123;</div><div class="line">                return runtimeMXBean.getUptime();</div><div class="line">        &#125;</div><div class="line">        //can&apos;t happen</div><div class="line">        return -1;        </div><div class="line">    &#125;</div><div class="line">    </div><div class="line">    /**</div><div class="line">     * 获取当前JVM启动时间。</div><div class="line">     * </div><div class="line">     * @return </div><div class="line">     *      当前JVM启动时间，单位（毫秒）。</div><div class="line">     */</div><div class="line">    public static long getJavaVMStartTime() &#123;</div><div class="line">        // throw new UnsupportedOperationException();  </div><div class="line">        RuntimeMXBean runtimeMXBean = ManagementFactory.getRuntimeMXBean();</div><div class="line">        if(runtimeMXBean != null)&#123;</div><div class="line">                return runtimeMXBean.getStartTime();</div><div class="line">        &#125;</div><div class="line">        //can&apos;t happen</div><div class="line">        return -1;       </div><div class="line">    &#125;   </div><div class="line">    </div><div class="line">    private SystemUtils()&#123;&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+    <section id="comment">
+        <div class="card">
+            <div class="card-content">
+                <!-- Duoshuo Comment BEGIN -->
+                <div class="ds-thread" data-thread-key="2016/11/27/java.lang/01/" data-title="lang包之 System" data-url="http://jbeacon.top/2016/11/27/java.lang/01/"></div>
+
+                <script type="text/javascript">
+                    console.log(document.querySelector('.ds-thread'));
+                    var duoshuoQuery = {
+                        short_name: 'jbeacon'
+                    };
+                    (function() {
+                        var ds = document.createElement('script');
+                        ds.type = 'text/javascript';
+                        ds.async = true;
+                        ds.src = (document.location.protocol == 'https:'
+                            ? 'https:'
+                            : 'http:') + '//static.duoshuo.com/embed.js';
+                        ds.charset = 'UTF-8';
+                        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+                    })();
+                </script>
+                <!-- Duoshuo Comment END -->
+            </div>
+        </div>
+    </section>
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large green">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect blue" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse orange"  data-activates="main-menu" title="menu"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="social-group col m3 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="http://weibo.com/3099694953/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank">
+                        <i class="fa fa-2x fa-weibo"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://github.com/RiXiong" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="/atom.xml" target="_blank">
+                        <i class="fa fa-2x fa-rss"></i>
+                    </a>
+                
+            </div>
+            
+
+            
+            <div class="col m9 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="http://raytaylorlin.com/" target="_blank">raytaylorism主题作者的技术博客</a>
+                
+                    <a class="social-link" href="https://github.com/raytaylorlin" target="_blank">Github地址（测试友情链接）</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright indigo-link-context">
+        <div class="container">
+            © 2016 jbeacon.top, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('green lighten-2');
+
+            
+            // 添加new标签
+            $('.menu-reading, .menu-about').append('<span class="new badge pink"></span>');
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword indigo lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+<script type="text/javascript" src="http://tajs.qq.com/stats?sId=a4Ho46rhVw4-PQxU" charset="UTF-8"></script>
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
