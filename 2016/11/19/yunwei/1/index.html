@@ -187,14 +187,6 @@
         
 
             <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/源码阅读/lang包/">
-                    lang包 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/源码阅读/JUC源码/">
                     JUC源码 <span class="right">1 篇</span></a>
                 </a>
@@ -202,25 +194,9 @@
 
         
 
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/大型网站技术架构/">
-                    大型网站技术架构 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/日常技术/">
-                    日常技术 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/心尘随笔/">
-                    心尘随笔 <span class="right">1 篇</span></a>
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/源码阅读/lang包/">
+                    lang包 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -251,8 +227,32 @@
         
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/教程/">
-                    教程 <span class="right">2 篇</span></a>
+                <a class="no-padding" href="/categories/心尘随笔/">
+                    心尘随笔 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/大型网站技术架构/">
+                    大型网站技术架构 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/日常技术/">
+                    日常技术 <span class="right">2 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/学习系列/">
+                    学习系列 <span class="right">5 篇</span></a>
                 </a>
             </li>
 
@@ -311,6 +311,11 @@
 
             </div>
             <time class="indigo-link-context" datetime="2016-11-19T03:36:14.505Z"><a href="/2016/11/19/yunwei/1/">2016-11-19</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
 
             
     <div class="tags-row">
@@ -449,7 +454,24 @@
 <hr>
 <p><a href="/css/images/mm_facetoface_collect.png"><img src="/css/images/mm_facetoface_collect.png" alt="tomcat架构" title="title"></a></p>
 
+                
+<p class="indigo-link-context">
+    <a href="/2016/11/20/jca/03/" rel="next" title="java.security源码解读系列-消息摘要与数字签名">
+    上一篇：java.security源码解读系列-消息摘要与数字签名
+  </a>
+</p>
+
+
+
+<p class="indigo-link-context">
+    <a href="/2016/11/18/jca/00/" rel="next" title="java.security源码解读系列-运用加密技术保护Java源代码">
+    下一篇：java.security源码解读系列-运用加密技术保护Java源代码
+  </a>
+</p>
+
+
             </div>
+			
         </div>
     </div>
 </article>
@@ -504,7 +526,7 @@
     <div class="container">
         <div class="row">
             
-            <div class="social-group col m3 s12">
+            <div class="social-group col m4 s12">
                 <h5 class="white-text">社交</h5>
                 
                     <a class="social-link" href="http://weibo.com/3099694953/profile?topnav=1&amp;wvr=6&amp;is_all=1" target="_blank">
@@ -519,11 +541,22 @@
                         <i class="fa fa-2x fa-rss"></i>
                     </a>
                 
+                <div class="site-visitors-container white-text">
+                    <span>
+                        <i class="fa fa-user"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+                    </span>
+                    <span>&nbsp;|&nbsp;</span>
+                    <span>
+                        <i class="fa fa-eye"></i>
+                        <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+                    </span>
+                </div>
             </div>
             
 
             
-            <div class="col m9 s12">
+            <div class="col m8 s12">
                 <h5 class="white-text">友情链接</h5>
                 
                     <a class="social-link" href="http://raytaylorlin.com/" target="_blank">raytaylorism主题作者的技术博客</a>
@@ -557,6 +590,8 @@
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/materialize.min.js"></script>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
 
 <script>
     (function($) {
@@ -598,6 +633,22 @@
 
             // 文章目录
             $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
             // 修正文章目录的left-border颜色
             var color = $('.table-of-contents-text').css('color');
             $('.table-of-contents-link').css('border-left-color', color);

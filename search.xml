@@ -4,6 +4,113 @@
   
     
     <entry>
+      <title><![CDATA[移动端之路-阿里Weex框架快速体验与环境搭建]]></title>
+      <url>http://jbeacon.top/2016/12/10/guid/mobile/01/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>导读:<br>作者：灯塔<br>Weex 是阿里研发的移动端框架，整体参考了vue, 尤大大作为顾问。</p>
+</blockquote>
+<p>#Weex简介</p>
+<h1 id="Weex框架环境搭建"><a href="#Weex框架环境搭建" class="headerlink" title="Weex框架环境搭建"></a>Weex框架环境搭建</h1><p>Weex是阿里开源的一款完美兼顾性能与动态的移动端解决方案，让移动端开发者可以通过简洁的前端语法写出Native级别的性能体验，并支持IOS,安卓、YunOS以及Web H5等多端的部署。<br>对移动端开发者来说，Weex主要解决了频繁发版和多端研发的两大痛点，同时解决了前端语言性能差和显示效果受限制的问题。<br>开发者可以通过Weex官网进行内测。<a href="http://alibaba.github.io/weex/" target="_blank" rel="external">http://alibaba.github.io/weex/</a><br>开发者只需要在自己的App中嵌入Weex的SDK,就可以通过撰写HTML/CSS/JavaScript来开发Native级别的Weex界面。Weex界面的生成码其实就是一段很小的JS,可以像发布网页一样轻松部署在服务端，然后在App中请求执行。</p>
+<h1 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h1><p>因为Weex使用了Node.js 的工具链，我们需要先安装node.js<br>下载地址：官网 <a href="http://www.nodejs.org/download/" target="_blank" rel="external">http://www.nodejs.org/download/</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习spring boot系列之 导读]]></title>
+      <url>http://jbeacon.top/2016/12/03/guid/spring-boot/00/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>导读：<br>跟我学习Spring boot 教程系列,jdk1.8,  spring-boot:1.4.0</p>
+</blockquote>
+<h1 id="确立学习目的"><a href="#确立学习目的" class="headerlink" title="确立学习目的"></a>确立学习目的</h1><p>本系列是学习spring boot系列之学习 spring-boot 的目的是为了更好的学习spring-cloud 的技术架构，如下：</p>
+<p><img src="/img/2016/12/spring-cloud.png" alt="spring cloud"></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习spring boot系列之3 配置swagger API 管理文档]]></title>
+      <url>http://jbeacon.top/2016/12/03/guid/spring-boot/03/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>导读：<br>跟我学习Spring boot 教程系列,jdk1.8,  spring-boot:1.4.0 swagger API</p>
+</blockquote>
+<p>swagger api 需要依赖如下的包：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&lt;dependency&gt;</div><div class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</div><div class="line">	&lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;</div><div class="line">	&lt;version&gt;2.2.2&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div><div class="line">&lt;dependency&gt;</div><div class="line">	&lt;groupId&gt;io.springfox&lt;/groupId&gt;</div><div class="line">	&lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;</div><div class="line">	&lt;version&gt;2.2.2&lt;/version&gt;</div><div class="line">&lt;/dependency&gt;</div></pre></td></tr></table></figure></p>
+<p>访问：<a href="http://localhost:8080/swagger-ui.html" target="_blank" rel="external">http://localhost:8080/swagger-ui.html</a></p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习spring boot系列之2 配置文件详解：自定义属性、随机数、多环境配置等]]></title>
+      <url>http://jbeacon.top/2016/12/03/guid/spring-boot/02/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>导读：<br>跟我学习Spring boot 教程系列,jdk1.8,  spring-boot:1.4.0</p>
+</blockquote>
+<p>在使用spring-boot 作为 单独的应用服务的时候，我们的应用需要在不同的环境中运行，其中我们一般的环境划分包括为：</p>
+<ul>
+<li>dev : 开发环境 </li>
+<li>prod ：生产环境</li>
+<li>test ：测试环境 </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">##======================================</div><div class="line">## 说明： 多环境配置文件</div><div class="line">##</div><div class="line">##</div><div class="line">##======================================</div><div class="line">jbeacon.top.blog.name=zrx</div><div class="line">jbeacon.top.blog.title=Spring Boot guide</div><div class="line">jbeacon.top.desc=$&#123;jbeacon.top.blog.name&#125;are writing《$&#123;jbeacon.top.blog.title&#125;》</div><div class="line"># 随机字符串</div><div class="line">jbeacon.top.blog.value=$&#123;random.value&#125;</div><div class="line"># 随机int</div><div class="line">jbeacon.top.blog.number=$&#123;random.int&#125;</div><div class="line"># 随机long</div><div class="line">jbeacon.top.blog.bignumber=$&#123;random.long&#125;</div><div class="line"># 10以内的随机数</div><div class="line">jbeacon.top.blog.test1=$&#123;random.int(10)&#125;</div><div class="line"># 10-20的随机数</div><div class="line">jbeacon.top.blog.test2=$&#123;random.int[10,20]&#125;</div><div class="line"># 多环境配置文件激活属性</div><div class="line">spring.profiles.active=dev</div></pre></td></tr></table></figure>
+<p>我们也可以通过一下的配置来获取属性文件的配置文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">@Value(&quot;$&#123;jbeacon.top.blog.name&#125;&quot;)</div><div class="line">private String name;</div><div class="line">@Value(&quot;$&#123;jbeacon.top.blog.title&#125;&quot;)</div><div class="line">private String title;</div><div class="line">@Value(&quot;$&#123;jbeacon.top.desc&#125;&quot;)</div><div class="line">private String desc;</div></pre></td></tr></table></figure></p>
+<p>通过Junit4测试获取该属性：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Assert.assertEquals(&quot;zrx&quot;, blogProperties.getName());</div></pre></td></tr></table></figure></p>
+<h1 id="基于Rest-ful-风格的-spring-boot"><a href="#基于Rest-ful-风格的-spring-boot" class="headerlink" title="基于Rest ful 风格的 spring-boot"></a>基于Rest ful 风格的 spring-boot</h1><p>通过使用<br>@RestController<br>@RequestMapping(value=”/users”)     // 通过这里配置使下面的映射都在/users下，可去除<br>替代原来的 @Controller +@RequestMapping(value=”/users”) + @RequestBody 的Rest ful玩法。</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[学习spring boot系列之 hello world]]></title>
+      <url>http://jbeacon.top/2016/11/30/guid/spring-boot/01/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>导读：<br>跟我学习Spring boot 教程系列,jdk1.8,  spring-boot:1.4.0</p>
+</blockquote>
+<h1 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h1><p>要学习 spring-boot 的第一手资料当然是在官网啦！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">import org.springframework.boot.*;</div><div class="line">import org.springframework.boot.autoconfigure.*;</div><div class="line">import org.springframework.web.bind.annotation.*;</div><div class="line">@RestController</div><div class="line">@SpringBootApplication</div><div class="line">public class Example &#123;</div><div class="line">	@RequestMapping(&quot;/&quot;)</div><div class="line">	String home() &#123;</div><div class="line">		return &quot;Hello World!&quot;;</div><div class="line">	&#125;</div><div class="line">	public static void main(String[] args) throws Exception &#123;</div><div class="line">		SpringApplication.run(Example.class, args);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">``` </div><div class="line"># Maven 配置</div></pre></td></tr></table></figure>
+<p>&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</p>
+<p><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemalocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"><br>    <modelversion>4.0.0</modelversion><br>    <groupid>com.didispace</groupid><br>    <artifactid>Chapter1</artifactid><br>    <version>1.0.0</version><br>    <packaging>jar</packaging><br>    <name>Chapter1</name><br>    <description>The first Spring Boot project</description><br>    <parent><br>        <groupid>org.springframework.boot</groupid><br>        <artifactid>spring-boot-starter-parent</artifactid><br>        <version>1.3.2.RELEASE</version><br>        <relativepath> <!-- lookup parent from repository --><br>    </relativepath></parent><br>    <properties><br>        <project.build.sourceencoding>UTF-8</project.build.sourceencoding><br>        <java.version>1.8</java.version><br>    </properties><br>    <dependencies><br>        <dependency><br>            <groupid>org.springframework.boot</groupid><br>            <artifactid>spring-boot-starter</artifactid><br>        </dependency><br>        <dependency><br>            <groupid>org.springframework.boot</groupid><br>            <artifactid>spring-boot-starter-test</artifactid><br>            <scope>test</scope><br>        </dependency><br>        <dependency><br>            <groupid>org.springframework.boot</groupid><br>            <artifactid>spring-boot-starter-web</artifactid><br>        </dependency><br>    </dependencies><br>    <build><br>        <plugins><br>            <plugin><br>                <groupid>org.springframework.boot</groupid><br>                <artifactid>spring-boot-maven-plugin</artifactid><br>            </plugin><br>        </plugins><br>    </build><br></project><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div><div class="line">具体详细代码，请参考spring-boot-hello1 </div><div class="line">执行命令： java -jar spring-boot-hello1-1.0-SNAPSHOT.jar</div><div class="line">然后，在浏览器输入 http://localhost:9090/hello 就可以看到有 json 格式的数据返回。</div><div class="line">java -jar spring-boot01-1.0-SNAPSHOT.jar &gt; log.file 2&gt;&amp;1 &amp;</div><div class="line"></div><div class="line">如果这个时候，我想关掉后台运行的 Spring Boot 的服务，我要这样做：</div><div class="line">ps aux | grep spring | xargs kill -9</div><div class="line"></div><div class="line"></div><div class="line"># 非继承方式实现 spring-boot(boottool)</div><div class="line">参考代码例子 spring-hello2</div><div class="line">pom 仅仅需要：添加Maven配置</div></pre></td></tr></table></figure></p>
+<pre><code>&lt;dependencies&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-starter-web&lt;/artifactId&gt;
+        &lt;version&gt;1.4.0.RELEASE&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;!-- Import dependency management from SpringBoot --&gt;
+    &lt;dependency&gt;
+        &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+        &lt;artifactId&gt;spring-boot-dependencies&lt;/artifactId&gt;
+        &lt;version&gt;1.4.0.RELEASE&lt;/version&gt;
+        &lt;type&gt;pom&lt;/type&gt;
+        &lt;scope&gt;import&lt;/scope&gt;
+    &lt;/dependency&gt;
+&lt;/dependencies&gt;
+</code></pre><p>```</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[CPU虚高故障分析]]></title>
+      <url>http://jbeacon.top/2016/11/29/other/02/</url>
+      <content type="html"><![CDATA[<h1 id="1-故障现象"><a href="#1-故障现象" class="headerlink" title="1 故障现象"></a>1 故障现象</h1><p>这天上午，有同事反映公司后台管理系统运行缓慢，运维同事检查发现cpu占用过高，重启服务器后故障消失。<br>这天下午，有同事也反映后台系统的某模块系统，运行缓慢，多次重启后故障仍然存在，使用top命令查看服务器的情况，发现cpu占用率接近100%。</p>
+<h1 id="2-cpu问题定位"><a href="#2-cpu问题定位" class="headerlink" title="2 cpu问题定位"></a>2 cpu问题定位</h1><h2 id="定位问题进程"><a href="#定位问题进程" class="headerlink" title="定位问题进程"></a>定位问题进程</h2><p>  使用了top指令查看资源占用情况，发现PID为11705的进程消耗了大量的CPU资源，达到了780.4</p>
+<h2 id="定位问题线程"><a href="#定位问题线程" class="headerlink" title="定位问题线程"></a>定位问题线程</h2><p>   使用 ps -mp 11705 -o THREAD,tid,time  指令把该11705进程的thread,tid,time给列出来，<br>   发现11707-11715 这段中的线程占用了大量的cpu时间，各个线程占用了12分钟的时间。</p>
+<h2 id="查看问题线程堆栈"><a href="#查看问题线程堆栈" class="headerlink" title="查看问题线程堆栈"></a>查看问题线程堆栈</h2><p>  挑选 11707 这个线程，查看该线程堆栈情况。<br>  步骤：1<br>  先将线程id转成16进制，<br>  jstack pid|grep 11707 -A 30</p>
+<p>  步骤：2<br>  使用jstack 打印线程堆栈信息<br>  在打印信息中，发现该线程是JVM GC线程。那么现在基本可以确定是内存不足，或内存泄漏导致gc线程持续gc 运行，cpu占用过高。（这种情况类是Effect java 第一章提到的）。</p>
+<h1 id="3-内存定位"><a href="#3-内存定位" class="headerlink" title="3 内存定位"></a>3 内存定位</h1><h2 id="定位内存区域"><a href="#定位内存区域" class="headerlink" title="定位内存区域"></a>定位内存区域</h2><p>  使用jstat -gcutil  查看该进程的内存情况</p>
+<p>  此时可以看到：<br>  E 100.00：伊甸区内存已满；<br>  O 99.98：老年代内存已满；<br>  FGC 117：该进程发生了117次全量GC；<br>  GCT 908.51：该进程GC时间908秒。</p>
+<pre><code>根据以上信息，基本可确定是程序代码存在问题。
+</code></pre><h2 id="分析内存对象"><a href="#分析内存对象" class="headerlink" title="分析内存对象"></a>分析内存对象</h2><p>   使用jmap -histo 指令查看进程的内存对象情况：<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">  jmap -histo 14062 &gt;&gt; jmap.out</div><div class="line"> ```   </div><div class="line"> 拉日志出来看看,此时可以看到，HashMap$Entry的实例数达到5000W，Integer、Double的实例数达到5000w、2000多W，三者占用了大量的内存。</div><div class="line"> </div><div class="line">## 分析堆栈</div><div class="line"> 使用jstat指令查看进程的堆栈情况：</div></pre></td></tr></table></figure></p>
+<pre><code>jstack 12804 &gt;&gt; jstat.out
+</code></pre><p>  ```<br>  查找相关的代码：<br>  发现：<br>  发现ActivityUtil.java的477行正在使用HashMap的put方法。</p>
+<h1 id="4-代码定位"><a href="#4-代码定位" class="headerlink" title="4 代码定位"></a>4 代码定位</h1><p>  打开ActivityUtil.java类，定位到477行，代码如下：<br>  发现 Map 的对象巨大，占用了Map对象，使得cpu过高，应该是秒杀活动的礼品对象数据过高。</p>
+<h1 id="5-改进"><a href="#5-改进" class="headerlink" title="5 改进"></a>5 改进</h1><p>  修改代码，对礼品进行分页获取。</p>
+<h1 id="6-总结-如何查找最高的java线程"><a href="#6-总结-如何查找最高的java线程" class="headerlink" title="6 总结-如何查找最高的java线程"></a>6 总结-如何查找最高的java线程</h1><pre><code>1，使用命令top -p &lt;pid&gt; ，显示你的java进程的内存情况，pid是你的java进程号，比如123
+2，按H，获取每个线程的内存情况
+3，找到内存和cpu占用最高的线程pid，比如15248
+4，执行 printf 0x%x 15248 得到 0x3b90 ,此为线程id的十六进制
+5，执行 jstack 123|grep -A 10 3b90，得到线程堆栈信息中3b90这个线程所在行的后面10行
+6，查看对应的堆栈信息找出可能存在问题的代码
+</code></pre>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[JUC源码阅读之 Thread]]></title>
       <url>http://jbeacon.top/2016/11/27/juc/01/</url>
       <content type="html"><![CDATA[<blockquote>
@@ -441,7 +548,7 @@
     
     <entry>
       <title><![CDATA[机器学习]]></title>
-      <url>http://jbeacon.top/2016/11/12/rob/rob/</url>
+      <url>http://jbeacon.top/2016/11/12/other/rob/</url>
       <content type="html"><![CDATA[<p><a href="https://github.com/im-qq/webqq-core" target="_blank" rel="external">webqq-core</a><br><a href="https://github.com/b3log/xiaov" target="_blank" rel="external">xiaov</a><br><a href="https://github.com/im-qq/webqq-core" target="_blank" rel="external">https://github.com/im-qq/webqq-core</a></p>
 <p><a href="https://code.google.com/archive/p/iqq/" target="_blank" rel="external">https://code.google.com/archive/p/iqq/</a><br><a href="http://pan.baidu.com/share/home?uk=3071047022" target="_blank" rel="external">http://pan.baidu.com/share/home?uk=3071047022</a><br><a href="https://hacpai.com/article/1467011936362" target="_blank" rel="external">https://hacpai.com/article/1467011936362</a></p>
 ]]></content>
@@ -647,28 +754,6 @@
 ]]></content>
     </entry>
     
-    <entry>
-      <title><![CDATA[教你玩博客]]></title>
-      <url>http://jbeacon.top/2016/11/07/guid/07/</url>
-      <content type="html"><![CDATA[<p>大家好，我是灯塔下的笔者，很高兴您能访问我的博客。</p>
-<h2 id="Quick-Start1"><a href="#Quick-Start1" class="headerlink" title="Quick Start1"></a>Quick Start1</h2><h2 id="Quick-Start2"><a href="#Quick-Start2" class="headerlink" title="Quick Start2"></a>Quick Start2</h2>]]></content>
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>http://jbeacon.top/2016/11/06/guid/hello-world/</url>
-      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    </entry>
-    
   
   
     
@@ -681,14 +766,14 @@
     </entry>
     
     <entry>
-      <title><![CDATA[读书]]></title>
-      <url>http://jbeacon.top/reading/index.html</url>
+      <title><![CDATA[标签云]]></title>
+      <url>http://jbeacon.top/tagcloud/index.html</url>
       <content type="html"></content>
     </entry>
     
     <entry>
-      <title><![CDATA[标签云]]></title>
-      <url>http://jbeacon.top/tagcloud/index.html</url>
+      <title><![CDATA[读书]]></title>
+      <url>http://jbeacon.top/reading/index.html</url>
       <content type="html"></content>
     </entry>
     
